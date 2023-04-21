@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <p>node.textcontent vs HTMLElement.innerText</p>
+
+     <script>
+
+     </script>
+</body>
+</html>
+
+<!--
+
+const ptag = document.querySelector('p')
+
+console.log(ptag.innerText)
+VM259:1 node.textcontent vs HTMLElement.innerText
+
+console.log(ptag.textContent)
+VM393:1 node.textcontent vs HTMLElement.innerText
+
+
+// innerText만 숨김처리됨 -> 보여지는 부분 담당
+ptag.style.visibility = 'hidden'
+'hidden'
+
+console.log(ptag.innerText)
+console.log(ptag.textContent)
+VM715:1 
+VM715:2 node.textcontent vs HTMLElement.innerText
+
+
+ptag.style.visibility = 'visible'
+'visible'
+
+console.log(ptag.innerText)
+console.log(ptag.textContent)
+VM750:1 node.textcontent vs HTMLElement.innerText
+VM750:2 node.textcontent vs HTMLElement.innerText
+
+-->

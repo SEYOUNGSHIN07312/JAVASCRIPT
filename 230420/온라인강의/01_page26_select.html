@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="title">DOM 조작</h1>
+  <p class="text">querySelector</p>
+  <p class="text">querySelectorAll</p>
+
+  <ul>
+    <li>Javascript</li>
+    <li>Python</li>
+  </ul>
+
+  <p>
+
+  </p>
+  
+  <a href=""></a>
+
+  <script>
+
+  </script>
+</body>
+</html>
+
+
+<!--
+document.querySelector('선택자')
+
+document.querySelector('#title')
+// <h1 id=​"title">​DOM 조작​</h1>​
+
+
+All : 일치하는 모든 것을 가져옴 -> DOM 변경사항을 실시간으로 반영하지 않음(그 시점의 상태)
+document.querySelectorAll('.text')
+// NodeList(2) [p.text, p.text]
+
+
+Selector : 일치하는 첫번째만 가져옴, 없으면 null
+document.querySelector('.text')
+// <p class=​"text">​querySelector​</p>​
+
+
+document.querySelectorAll('body > ul > li')
+// NodeList(2) [li, li]
+      0: li
+      1: li
+      length: 2
+      [[Prototype]]: NodeList
+-->
