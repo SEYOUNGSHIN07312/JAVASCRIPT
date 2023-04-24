@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS DOM</title>
+</head>
+<style>
+  .red {
+    color: red;
+  }
+</style>
+<body>
+  <h1>selector test</h1>
+  
+  <div class="container">
+    <form class="input-container">
+      <input id="input" placeholder="예) 과일명 추가" />
+      <button id="add-button" >추가</button>
+    </form>
+
+  <div class="list-container">
+    <h1>과일 목록</h1>
+    <ul id="list">
+      <li class="list-item">사과</li>
+      <li class="list-item">딸기</li>
+    </ul>
+  </div>
+  <script>
+    
+    // 버튼을 누르면 이벤트 실행하기
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+    const input = document.querySelector('#input') // 사용자 input 가져오기
+    const text = input.value.trim() // input 양쪽의 공백을 제거
+
+    if (text !== '') {
+      addToList(text)
+      input.value = '' // 입력창 초기화
+      input.focus() // 바로 다음 입력을 할 수 있도록 focus
+    }
+  });
+
+    function addToList(text) {
+    const list = document.querySelector('#list')
+
+    const newListItem = document.createElement('li') // 새로운 li 요소를 만듬
+    newListItem.classList.add('list-item') // list-item 클래스를 더해줌
+
+    newListItem.innerHTML = text //사용자 입력 문자를 li사이에 넣음
+
+    list.appendChild(newListItem) // 리스트에 새로 만든 li를 추가
+  }
+
+    
+
+
+
+    
+
+
+
+
+  </script>
+</body>
+</html>
